@@ -19,15 +19,17 @@ $(document).ready(function() {
     let body = JSON.parse(response);
     if(body.data.length > 0) {
     for (var i = 0; i < body.data.length; i++) {
-    if(body.data.length > 0) {
       $('#showDoctors').append(`<div class="list"><strong>
       ${body.data[i].profile.first_name} ${body.data[i].profile.last_name} </strong><br>${body.data[i].practices[0].visit_address.street}<br>
       ${body.data[i].practices[0].visit_address.city} ${body.data[i].practices[0].visit_address.state}, ${body.data[i].practices[0].visit_address.zip}
       <br>${body.data[i].practices[0].phones[0].number}<br>Accepting new patients: ${body.data[i].practices[0].accepts_new_patients}
       <br>Website: ${body.data[i].practices[0].website}<br></div>`);
+    }
     } else {
-      $('.showErrors').append('<div class="list">No doctors availabe in your area fit that request.</div>');
-      }
+      $('#showDoctors').append("There were no doctors that fit your search");
+    } function(error) {
+      $('#showErrors').append(`error.message`)
+    }
     };
   });
 
@@ -51,7 +53,7 @@ $(document).ready(function() {
         } else {
         $('#showDoctors').append("There were no doctors that fit your search");
       } function(error) {
-        $('#showErrors').append(`body.meta.message`);
+        $('#showErrors').append(`error.message`);
 
       }
     });
