@@ -17,9 +17,9 @@ in Terminal run the following:
  $ bower install
  $ gulp build
  $ gulp serve
--you may need to use the command line for windows as appose to power shell or a bash based solution. 
+-you may need to use the command line for windows as appose to power shell or a bash based solution.
 
-
+-I've included a .env file in the top level of the project that houses the API key. To register for your own api key please go to https://developer.betterdoctor.com/signup and create your own account. 
 ## Specifications
 
 | Behavior        | Input           | Outcome  |
@@ -32,9 +32,9 @@ in Terminal run the following:
 
 
 ## Known Bugs
-submit button needs to be clicked twice and .empty function still not working.
+errors return undefined
 ## Future additions
-Would like to add location menu/search and doctor's photos.
+Would like to add location menu/search.
 ## Technologies Used
 
 HTML/CSS
