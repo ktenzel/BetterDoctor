@@ -41,11 +41,11 @@ $(document).ready(function() {
         $('#showDoctors').append(`<div class="list"><strong>${body.data[i].profile.first_name} ${body.data[i].profile.last_name}</strong><br>${body.data[i].practices[0].visit_address.street}
         <br>${body.data[i].practices[0].visit_address.city} ${body.data[i].practices[0].visit_address.state}, ${body.data[i].practices[0].visit_address.zip}<br>${body.data[i].practices[0].phones[0].number}
         <br>Accepting new patients: ${body.data[i].practices[0].accepts_new_patients}<br>Website: ${body.data[i].practices[0].website}<br></div>`);
-      } else {
-        $('#showDoctors').append("There were no doctors that fit your search");
       }
+        } else {
+        $('#showDoctors').append("There were no doctors that fit your search");
       } function(error) {
-        $('#showErrors').append(`body.meta.message`)
+        $('#showErrors').append(`body.meta.message`);
 
       }
     });
