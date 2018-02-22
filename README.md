@@ -13,13 +13,14 @@ This app accesses the BetterDoctor API and queries request by first and last nam
 Clone repository
 
 in Terminal run the following:
- $ npm install
- $ bower install
- $ gulp build
- $ gulp serve
+ `$ npm install`
+ `$ bower install`
+ `$ gulp build`
+ `$ gulp serve`
 -you may need to use the command line for windows as appose to power shell or a bash based solution.
 
--I've included a .env file in the top level of the project that houses the API key. To register for your own api key please go to https://developer.betterdoctor.com/signup and create your own account. 
+-Creat a file called .env to store your API key. To register for your own api key please go to https://developer.betterdoctor.com/signup and create your own account. 
+
 ## Specifications
 
 | Behavior        | Input           | Outcome  |
