@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+     <script src="build/js/vendor.min.js"></script>
+     <script type="text/javascript" src="build/js/app.js"></script>
+     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    </script>
+    <title>Better Doctor</title>
+  </head>
+  <body>
+    <!-- <div class="video-background">
+    <div class="video-foreground">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/35z2xHZVVN8?rel=0&amp;controls=0&showinfo=0&rel=0&autoplay=1&loop=3&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div> -->
+  </div>
+    <div class="container">
+      <div class="title">
+        <h1>Better Doctor</h1>
+        <h3>Search for doctors in the Portland area.</h3>
+      </div>
+      <div class="title">
+      <form class="form" id="nameForm" action="index.html" method="post">
+        <label for="name">Search Doctor's name</label>
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <button type="submit" class="stn-success" id="nameSearch">Search Names (click twice)</button>
+      </form>
+      <p>- or -</p>
+      <form class="form" id="queryForm" action="index.html" method="post">
+        <label for="query">Search Condition</label>
+        <input type="text" id="query" placeholder="Condition">
+        <button type="submit" class="stn-success" id="querySearch">Search Conditions (click twice)</button>
+      </form>
+
+        <div id="showErrors"></div>
+        <div id="showDoctors"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
