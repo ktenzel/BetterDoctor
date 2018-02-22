@@ -1,5 +1,5 @@
 import {docName} from './../js/docName.js';
-import {docQuery} from './../js/docQueryb.js';
+import {docQuery} from './../js/docQuery.js';
 $(document).ready(function() {
 
   $('#nameForm').submit(function(event){
