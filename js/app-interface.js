@@ -14,13 +14,17 @@ $(document).ready(function() {
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
     let nameQuery = docName(firstName, lastName);
-    for (var i = 0; i < info.docName.length; i++) {
-    if(info.docName.length > 0) {
+
+    nameQuery.then(function(response) {
+    let body = JSON.parse(response);
+    if(body.data.length > 0) {
+    for (var i = 0; i < body.data.length; i++) {
+    if(body.data.length > 0) {
       $('#showDoctors').append(`<div class="list"><strong>
-      ${info.docName[i].profile.first_name} ${info.docName[i].profile.last_name} </strong><br>${info.docName[i].practices[0].visit_address.street}<br>
-      ${info.docName[i].practices[0].visit_address.city} ${info.docName[i].practices[0].visit_address.state}, ${info.docName[i].practices[0].visit_address.zip}
-      <br>${info.docName[i].practices[0].phones[0].number}<br>Accepting new patients: ${info.docName[i].practices[0].accepts_new_patients}
-      <br>Website: ${info.docName[i].practices[0].website}<br></div>`);
+      ${body.data[i].profile.first_name} ${body.data[i].profile.last_name} </strong><br>${body.data[i].practices[0].visit_address.street}<br>
+      ${body.data[i].practices[0].visit_address.city} ${body.data[i].practices[0].visit_address.state}, ${body.data[i].practices[0].visit_address.zip}
+      <br>${body.data[i].practices[0].phones[0].number}<br>Accepting new patients: ${body.data[i].practices[0].accepts_new_patients}
+      <br>Website: ${body.data[i].practices[0].website}<br></div>`);
     } else {
       $('.showErrors').append('<div class="list">No doctors availabe in your area fit that request.</div>');
       }
