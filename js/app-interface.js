@@ -14,17 +14,17 @@ $(document).ready(function() {
     let body = JSON.parse(response);
     if(body.data.length > 0) {
       for (var i = 0; i < body.data.length; i++) {
-        $('#showDoctors').append(`<div class="list"><strong>
+        $('#showDoctors').append(`<div class="list"><img class="pic" src="${body.data[i].profile.image_url}"><strong>
         ${body.data[i].profile.first_name} ${body.data[i].profile.last_name} </strong><br>${body.data[i].practices[0].visit_address.street}<br>
         ${body.data[i].practices[0].visit_address.city} ${body.data[i].practices[0].visit_address.state}, ${body.data[i].practices[0].visit_address.zip}
         <br>${body.data[i].practices[0].phones[0].number}<br>Accepting new patients: ${body.data[i].practices[0].accepts_new_patients}
         <br>Website: ${body.data[i].practices[0].website}<br></div>`);
       }
       } else {
-        $('#showDoctors').append("There were no doctors that fit your search");
+        $('#showDoctors').append(`<div class="list">There were no doctors that fit your search</div>`);
       }
     },  function(error) {
-      $('#showErrors').append(`Error: ${error.status}<br>Please try again`);
+      $('#showErrors').append(`<div class="list">Error: ${error.status}<br>Please try again</div>`);
     });
   });
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
       let body = JSON.parse(response);
       if(body.data.length > 0) {
         for (var i = 0; i < body.data.length; i++) {
-        $('#showDoctors').append(`<div class="list"><strong>${body.data[i].profile.first_name} ${body.data[i].profile.last_name}</strong><br>${body.data[i].practices[0].visit_address.street}
+        $('#showDoctors').append(`<div class="list"><img class="pic" src="${body.data[i].profile.image_url}"><strong>${body.data[i].profile.first_name} ${body.data[i].profile.last_name}</strong><br>${body.data[i].practices[0].visit_address.street}
         <br>${body.data[i].practices[0].visit_address.city} ${body.data[i].practices[0].visit_address.state}, ${body.data[i].practices[0].visit_address.zip}<br>${body.data[i].practices[0].phones[0].number}
         <br>Accepting new patients: ${body.data[i].practices[0].accepts_new_patients}<br>Website: ${body.data[i].practices[0].website}<br></div>`);
       }

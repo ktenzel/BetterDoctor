@@ -28,7 +28,11 @@
 .vid-info .acronym { display: none; }
 }
 
-
+.pic{
+  float: left;
+  height: 100%;
+  margin-right: 5px;
+}
 .title, .form{
   color: white;
   text-align: center;
