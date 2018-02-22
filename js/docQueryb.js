@@ -1,12 +1,4 @@
 var apiKey = require('./../.env').apiKey;
-//
-// export class DocQuery {
-//
-// constructor() {
-//   this.docQuery = [];
-//   this.query = query;
-// }
-
 export let docQuery = function(query) {
   return new Promise(function(resolve, reject) {
     let request = new XMLHttpRequest();
@@ -21,13 +13,4 @@ export let docQuery = function(query) {
     request.open("GET", url, true);
     request.send();
     });
-  //   apiCall.then(function(response) {
-  //   let body = JSON.parse(response);
-  //   for (var i = 0; i < body.data.length; i++) {
-  //     if(body.data.length > 0){
-  //       that.docQuery.push(body.data[i]);
-  //     }
-  //   }
-  // });
 };
-  // }
