@@ -13,8 +13,7 @@ $(document).ready(function() {
     event.preventDefault();
     let firstName = $('#firstName').val();
     let lastName = $('#lastName').val();
-    let nameQuery = 
-    info.getDocName(firstName, lastName);
+    let nameQuery = docName(firstName, lastName);
     for (var i = 0; i < info.docName.length; i++) {
     if(info.docName.length > 0) {
       $('#showDoctors').append(`<div class="list"><strong>
